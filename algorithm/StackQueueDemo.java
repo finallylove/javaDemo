@@ -5,8 +5,16 @@
 public class StackQueueDemo {
 
     public static void main(String[] args){
-        queueToStack();
+        testArrayStack();
+    }
 
+    private static void testArrayStack(){
+        ArrayStack stack = new ArrayStack();
+        for (int i = 1; i <= 40; i++) {
+            stack.push(i);
+        }
+
+        System.out.print(stack.elements.length);
     }
 
     private static void queueToStack(){

@@ -1,6 +1,9 @@
+import java.util.Arrays;
+import java.util.EmptyStackException;
+
 public class ArrayStack{
-	private Object[] elements;
-	private int size = 0;
+	public Object[] elements;
+	public int size = 0;
 	private static final int DEFAULT_INITIAL_CAPACITY = 16;
 
 	public ArrayStack(){
@@ -23,7 +26,7 @@ public class ArrayStack{
 
 	private void ensureCapacity(){
 		if (elements.length == size) {
-			elements = Array.copyOf(elements, 2 * size + 1);
+			elements = Arrays.copyOf(elements, 2 * size + 1);
 		}
 	}
 }
